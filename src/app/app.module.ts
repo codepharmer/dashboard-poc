@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Import your components
 import { AppComponent } from './app.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+
+// Routing configuration
+import { appRoutes } from './app.routes';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [ LeaderboardComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
